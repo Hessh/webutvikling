@@ -12,6 +12,7 @@
 
         Fargevalg
             - Brukt farger med god kontrast for at personer med fargeblindhet skal ha så lite vanskeligheter som mulig
+            - Liten minus her er fargen grønn på rød og rød på grønn i case.html
 
         Kontrast
             - Følger minstekravet til kontrast, altså nivå AA
@@ -19,11 +20,12 @@
         Fulgt retningslinjer for bruk av tilbakemeldinger til bruker
             - Popup-advarsel når brukeren er på vei til å gjøre noe ireversibelt
 
-        Fulgt retningslinjer for bruk av forklarende meldinger til bruker om hva som skal skje
+        Fulgt retningslinjer for bruk av forklarende meldinger til bruker om hva som er på vei til å skje
             - Klar tekst for hva som er i ferd med å skje hvis brukeren trykker på ulike knapper
 
-        Bruk av kjente ikoner og snarveier for å ikke villlede brukeren
+        Bruk av kjente ikoner og snarveier for å ikke villlede brukeren. Bl.a:
             - Pluss-tegn for å legge til nye elementer
+            - Søppelkasse for sletting
             - Logo leder tilbake til forside
 
         Fulgt konvensjon for oppbygging av elementer med tanke på andvendbarhet ved bruk av tastatur
@@ -32,8 +34,8 @@
 
     KNOWN BUGS:
 
-        - Kan ikke slette eller endre allerede eksisterende statiske objekter, men de skal jo ikke være der i en reell situasjon uansett.
-        - Slettingen bugger seg noen ganger hvis man har opprettet veldig mange objekter og prøver å slette alle samtidig.
+        - Kan ikke slette eller endre allerede eksisterende statiske objekter, men de skal ikke være der i en reell situasjon, så har sett vekk fra dette.
+        - Slettingen av objekter bugger seg noen ganger hvis man har opprettet veldig mange objekter og prøver å slette alle samtidig.
         - Hover-stilsetting av løst/uløst knapp på case.html siden fungerer bare før man trykker på knappen første gang
 -->
 
@@ -71,11 +73,15 @@
             <h1>RIKETS SIKKERHET</h1>
             <h2>VÅRT ANSVAR</h2>
             <div class="banner-overlay"></div>
-            <img class="banner-img fade" style="background-image: url('img/banner/1.jpg');" alt="Barcode i Oslo" >
-            <img class="banner-img fade" style="background-image: url('img/banner/2.jpg'); display: none" alt="Norsk flagg i flaggstang">
-            <img class="banner-img fade" style="background-image: url('img/banner/3.jpg'); display: none" alt="Politistyrke">
-            <img class="banner-img fade" style="background-image: url('img/banner/4.jpg'); display: none" alt="Overvåkingskamera på vegg">
-            <img class="banner-img fade" style="background-image: url('img/banner/5.jpg'); display: none" alt="Politistyrke rundt biler">
+            <img class="banner-img fade" style="background-image: url('img/banner/1.jpg');" alt="Barcode i Oslo">
+            <img class="banner-img fade" style="background-image: url('img/banner/2.jpg'); display: none"
+                alt="Norsk flagg i flaggstang">
+            <img class="banner-img fade" style="background-image: url('img/banner/3.jpg'); display: none"
+                alt="Politistyrke">
+            <img class="banner-img fade" style="background-image: url('img/banner/4.jpg'); display: none"
+                alt="Overvåkingskamera på vegg">
+            <img class="banner-img fade" style="background-image: url('img/banner/5.jpg'); display: none"
+                alt="Politistyrke rundt biler">
         </section>
         <!-- Cases -->
         <section class="case-wrapper">
