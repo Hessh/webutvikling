@@ -1,3 +1,5 @@
+/* Header-styling for all pages */
+
 header {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -49,6 +51,8 @@ header [class*="header-"], .topnav {
     transform: translateY(-50%);
     font-size: 2rem;
 }
+
+/* Media-Query */
 
 @media only screen and (max-width: 750px) {
     .header-right {

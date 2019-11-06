@@ -1,3 +1,7 @@
+/* Styles that affect every page */
+
+/* Common */
+
 html, body {
     font-size: 1rem;
     line-height: 16px;
@@ -21,6 +25,8 @@ main {
     margin-top: 4rem;
 }
 
+/* Banner */
+
 .banner {
     display: flex;
     flex-direction: column;
@@ -42,6 +48,8 @@ main {
     font-size: 1.5rem;
     color: #FFFFFF;
 }
+
+/* Main content */
 
 .case-wrapper {
     display: flex;
@@ -94,14 +102,16 @@ main {
     text-align: left;
     font-weight: 400;
 }
+
 .case-container .text-content h3 {
     font-weight: 300;
 }
+
 .case-container .text-content p {
     margin-bottom: 0;
 }
 
-/* BUTTONS */
+/* Buttons for all pages */
 
 button {
     font-weight: 600;
@@ -221,7 +231,7 @@ button {
     background-image: linear-gradient(#F15E5D, #ca4c4c);
 }
 
-.status-button{
+.status-button {
     padding: 0.8rem;
     font-size: 0.8rem;
     color: #FFFFFF;
@@ -242,6 +252,8 @@ button {
 .unsolved:hover {
     background-image: linear-gradient(#F15E5D, #ca4c4c);
 }
+
+/* Media-Query's */
 
 @media only screen and (max-width: 950px) {
     .case-container {
@@ -265,5 +277,4 @@ button {
     .finish-button {
         margin: 0.5rem 0;
     }
-    
 }

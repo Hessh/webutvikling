@@ -1,3 +1,5 @@
+/* Footer-styling for all pages */
+
 footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -36,7 +38,7 @@ footer {
     margin: .5rem 0;
 }
 
-#footer-content-3 h5{
+#footer-content-3 h5 {
     text-decoration: underline;
 }
 
@@ -62,6 +64,8 @@ footer {
     box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
 }
 
+/* Media-Query */
+
 @media only screen and (max-width: 750px) {
     footer {
         display: grid;
@@ -71,13 +75,13 @@ footer {
     .footer-content {
         margin: 1rem 0 0 0;
     }
-    #footer-content-1{
+    #footer-content-1 {
         order: 1;
     }
-    #footer-content-2{
+    #footer-content-2 {
         order: 3;
     }
-    #footer-content-3{
+    #footer-content-3 {
         order: 4;
     }
     #footer-content-4 {
