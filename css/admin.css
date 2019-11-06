@@ -1,0 +1,160 @@
+body {
+    position: relative;
+}
+
+#admin-banner {
+    background-image: url("../img/notes.jpg");
+    background-size: cover;
+    background-position: top center;
+}
+
+#admin-banner h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+}
+
+#admin-banner h2 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+}
+
+.overlay-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.80);
+}
+
+#add-container {}
+
+#edit-container {}
+
+#delete-container {}
+
+.overlay {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    padding: 1rem 2rem;
+    border-radius: 0.2rem;
+    border: 1px solid lightgray;
+    background-color: #FFFFFF;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.35);
+}
+
+.overlay input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    border: 1px solid lightgray;
+    font-size: 1rem;
+}
+
+.overlay select {
+    -webkit-appearance: none;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    border: 1px solid lightgray;
+    background-image: url("../img/icon-down.png");
+    background-repeat: no-repeat;
+    background-position: 98% center;
+    background-size: 1.5rem;
+    position: relative;
+}
+
+.overlay select:hover {
+    cursor: pointer;
+}
+
+.overlay textarea {
+    height: 6rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    border: 1px solid lightgray;
+    font-size: 1rem;
+    resize: none;
+}
+
+.overlay input[type="checkbox"] {
+    -webkit-appearance: none;
+    width: 50%;
+    margin: 0;
+    padding: 0.8rem;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-image: linear-gradient(#F15E5D, #e45555);
+}
+
+.overlay input[type="checkbox"]:hover {
+    background-image: linear-gradient(#F15E5D, #ca4c4c);
+}
+
+.overlay input[type="checkbox"]:focus {
+    outline: none;
+}
+
+.overlay input[type="checkbox"]:before {
+    content: "Uløst";
+}
+
+.overlay input[type="checkbox"]:checked {
+    background-image: linear-gradient(#32AD36, #2b8b2e);
+}
+
+.overlay input[type="checkbox"]:checked:before {
+    content: "Løst";
+}
+
+.overlay input[type="checkbox"]:checked:hover {
+    background-image: linear-gradient(#32AD36, #257528);
+}
+
+#confirmation-overlay {
+    align-items: center;
+}
+
+.icon-red {
+    margin-top: 0.5rem;
+    font-size: 3rem !important;
+    color: #f15e5d;
+}
+
+#confirmation-overlay h3 {
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 650px) {
+    .overlay {
+        width: 90vw;
+        padding: 0.5rem 1rem;
+    }
+    .overlay input {
+        margin-bottom: 0.5rem;
+    }
+    .overlay select {
+        margin-bottom: 0.5rem;
+    }
+    .overlay textarea {
+        height: 5rem;
+        margin-bottom: 0.5rem;
+    }
+    .overlay input[type="checkbox"] {
+        height: 100%;
+        padding: 0.5rem;
+        z-index: 999;
+    }
+}

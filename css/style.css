@@ -1,0 +1,274 @@
+html, body {
+    font-size: 1rem;
+    line-height: 16px;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #F7F7F7;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+}
+
+input[type="button"]:hover, button:hover, a:hover {
+    cursor: pointer;
+}
+
+main {
+    min-height: 700px;
+    margin-top: 4rem;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    margin-bottom: 2rem;
+}
+
+.banner h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+}
+
+.banner h2 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+}
+
+.banner h3 {}
+
+.case-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.case-wrapper .content-title {
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+.case-wrapper article h2 {
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.case-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem 0;
+    border-top: 1px solid lightgrey;
+}
+
+.case-container .single-case {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    margin: 1rem;
+    border-radius: 0.2rem;
+    border: 1px solid lightgrey;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.35);
+    background-color: #FFFFFF;
+}
+
+.case-container .img-container {
+    height: 80%;
+}
+
+.case-container img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+}
+
+.case-container .text-content {
+    padding: 0.5rem;
+}
+
+.case-container .text-content h2 {
+    text-align: left;
+    font-weight: 400;
+}
+.case-container .text-content h3 {
+    font-weight: 300;
+}
+.case-container .text-content p {
+    margin-bottom: 0;
+}
+
+/* BUTTONS */
+
+button {
+    font-weight: 600;
+    border: none;
+    border-radius: 0.2rem;
+}
+
+.add-button {
+    padding: 0.5rem 4rem;
+    color: #FFFFFF;
+    background-image: linear-gradient(#3E84C2, #3173ad);
+}
+
+.add-button span {
+    font-size: 2rem;
+}
+
+.add-button:hover {
+    background-image: linear-gradient(#3E84C2, #246094);
+}
+
+.button-container {
+    text-align: center;
+}
+
+.button-container * {
+    width: 46%;
+    margin: 0.5rem auto;
+    padding: 0.8rem 0;
+    color: #FFFFFF;
+    font-size: 0.8rem;
+}
+
+.button-container .detail-button {
+    width: 96%;
+    background-image: linear-gradient(#3E84C2, #3173ad);
+}
+
+.button-container .detail-button:hover {
+    background-image: linear-gradient(#3E84C2, #246094);
+}
+
+.button-container .edit-button {
+    background-image: linear-gradient(#3E84C2, #3173ad);
+}
+
+.button-container .edit-button:hover {
+    background-image: linear-gradient(#3E84C2, #246094);
+}
+
+.button-container .delete-button {
+    background-image: linear-gradient(#F15E5D, #e45555);
+}
+
+.button-container .delete-button:hover {
+    background-image: linear-gradient(#F15E5D, #ca4c4c);
+}
+
+.finish-button {
+    margin: 1rem 0;
+    padding: 0.8rem 0;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-image: linear-gradient(#32AD36, #2b8b2e);
+}
+
+.finish-button:hover {
+    background-image: linear-gradient(#32AD36, #257528);
+}
+
+.exit-button {
+    position: absolute;
+    top: 0.3rem;
+    right: 0;
+    background: transparent;
+    transition: transform 0.5s;
+}
+
+.exit-button:hover {
+    transform: scale(1.3);
+}
+
+.exit-button:focus {
+    outline: 0;
+}
+
+.confirmation-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.confirmation-button-container .cancel-button {
+    width: 50%;
+    margin-right: 1rem;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    color: #FFFFFF;
+    background-image: linear-gradient(#C1C1C1, #b8b3b3);
+}
+
+.confirmation-button-container .cancel-button:hover {
+    background-image: linear-gradient(#C1C1C1, #a8a4a4);
+}
+
+.confirmation-button-container .delete-button {
+    width: 50%;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    color: #FFFFFF;
+    background-image: linear-gradient(#F15E5D, #e45555);
+}
+
+.confirmation-button-container .delete-button:hover {
+    background-image: linear-gradient(#F15E5D, #ca4c4c);
+}
+
+.status-button{
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    color: #FFFFFF;
+}
+
+.solved {
+    background-image: linear-gradient(#32AD36, #2b8b2e);
+}
+
+.solved:hover {
+    background-image: linear-gradient(#32AD36, #257528);
+}
+
+.unsolved {
+    background-image: linear-gradient(#F15E5D, #e45555);
+}
+
+.unsolved:hover {
+    background-image: linear-gradient(#F15E5D, #ca4c4c);
+}
+
+@media only screen and (max-width: 950px) {
+    .case-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .banner h1 {
+        font-size: 1.7rem !important;
+    }
+    .banner h2 {
+        font-size: 1rem !important;
+    }
+    .case-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .case-container .img-container {
+        height: 65%;
+    }
+    .finish-button {
+        margin: 0.5rem 0;
+    }
+    
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,600,800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>PST - Kontrollpanel</title>
+</head>
+
+<body>
+    <!-- Inputfields in popup with overlay. Default display: none -->
+    <section id="add-container" class="overlay-container">
+        <article class="overlay">
+            <h3>LEGG TIL NY SAK</h3>
+            <select name="type" id="add-type">
+                <option value="Ikke spesifisert" selected>Velg type sak</option>
+                <option value="Etterforskning">Etterforskning</option>
+                <option value="Trusselvurdering">Trusselvurdering</option>
+                <option value="Informasjonsinnhenting">Informasjonsinnhenting</option>
+                <option value="Livvakt">Livvakt</option>
+                <option value="Forebygging">Forebygging</option>
+                <option value="Trygghetsrådgivning">Trygghetsrådgivning</option>
+            </select>
+            <select name="img" id="add-img">
+                <option value="logo.jpg" selected>Velg bilde</option>
+                <option value="etterforskning.jpg">Etterforskning</option>
+                <option value="forebygging.jpg">Forebygging</option>
+                <option value="informasjonsinnhenting.jpg">Informasjonsinnhenting</option>
+                <option value="livvakt.jpg">Livvakt</option>
+                <option value="person-etterforskning.jpg">Person-etterforskning 1</option>
+                <option value="person-etterforskning-1.jpg">Person-etterforskning 2</option>
+                <option value="trusselvurdering.jpg">Trusselvurdering</option>
+                <option value="trygghetsraadgivning.jpg">Trygghetsrådgivning</option>
+                <option value="folkemengde.jpg">Folkemengde</option>
+            </select>
+            <input id="add-title" type="text" placeholder="Tittel">
+            <textarea id="add-desc" type="text" placeholder="Beskrivelse"></textarea>
+            <div id="add-checkbox" class="checkbox">
+                <input id="add-solved" type="checkbox" value="Løst">
+            </div>
+            <button class="finish-button" onclick="addFinished()">FERDIG</button>
+            <button class="exit-button" onclick="exitAddPopup()"><span class="material-icons">close</span></button>
+        </article>
+    </section>
+    <section id="edit-container" class="overlay-container">
+        <article class="overlay">
+            <h3>REDIGER SAK</h3>
+            <select name="type" id="edit-type">
+                <option value="Ikke spesifisert" selected>Velg type sak</option>
+                <option value="Etterforskning">Etterforskning</option>
+                <option value="Trusselvurdering">Trusselvurdering</option>
+                <option value="Informasjonsinnhenting">Informasjonsinnhenting</option>
+                <option value="Livvakt">Livvakt</option>
+                <option value="Forebygging">Forebygging</option>
+                <option value="Trygghetsrådgivning">Trygghetsrådgivning</option>
+            </select>
+            <select name="img" id="edit-img">
+                    <option value="logo.jpg">Velg bilde</option>
+                    <option value="etterforskning.jpg">Etterforskning</option>
+                    <option value="forebygging.jpg">Forebygging</option>
+                    <option value="informasjonsinnhenting.jpg">Informasjonsinnhenting</option>
+                    <option value="livvakt.jpg">Livvakt</option>
+                    <option value="person-etterforskning.jpg">Person-etterforskning 1</option>
+                    <option value="person-etterforskning-1.jpg">Person-etterforskning 2</option>
+                    <option value="trusselvurdering.jpg">Trusselvurdering</option>
+                    <option value="trygghetsraadgivning.jpg">Trygghetsrådgivning</option>
+                    <option value="folkemengde.jpg">Folkemengde</option>
+                </select>
+            <input id="edit-title" type="text" placeholder="Tittel">
+            <textarea id="edit-desc" type="text" placeholder="Beskrivelse"></textarea>
+            <div id="edit-checkbox" class="checkbox">
+                <input id="edit-solved" type="checkbox" value="Løst">
+            </div>
+            <button class="finish-button" onclick="editFinished()">FERDIG</button>
+            <button class="exit-button" onclick="exitEditPopup()"><span class="material-icons">close</span></button>
+        </article>
+    </section>
+    <section id="delete-container" class="overlay-container">
+        <article class="overlay" id="confirmation-overlay">
+            <span class="material-icons icon-red">delete_forever</span>
+            <h3>ER DU SIKKER?</h3>
+            <p>Denne handlingen kan ikke angres</p>
+            <div class="confirmation-button-container">
+                <button class="cancel-button" onclick="exitDeletePopup()">AVBRYT</button>
+                <button class="delete-button" onclick="deleteFinished()">SLETT</button>
+            </div>
+        </article>
+    </section>
+    <!-- Fixed header that is equal on every page -->
+    <header>
+        <section class="header-left">
+            <a href="./"><img src="img/logo-long.png" alt="PST logo"></a>
+        </section>
+        <section class="header-right">
+            <div onclick="showMenu()" id="menu-button">&#9776;</div>
+            <nav id="topnav" class="topnav">
+                <ul><a href="./">HJEM</a></ul>
+                <ul><a href="admin.html"><u>KONTROLLPANEL</u></a></ul>
+            </nav>
+        </section>
+    </header>
+    <!-- Main container with main content -->
+    <main id="main-container">
+        <!-- Banner -->
+        <section id="admin-banner" class="banner">
+            <h1>ADMINISTRER DINE SAKER</h1>
+            <h2>LEGG TIL SAK</h2>
+            <button class="add-button" onclick="addCase()"><span class="material-icons">add</span></button>
+        </section>
+        <!-- Cases -->
+        <section class="case-wrapper">
+            <article>
+                <h2 class="content-title">Uløste saker:</h2>
+                <section class="case-container" id="admin-unsolved-case-container"></section>
+            </article>
+            <article>
+                <h2 class="content-title">Løste saker:</h2>
+                <section class="case-container" id="admin-solved-case-container"></section>
+            </article>
+        </section>
+    </main>
+    <!-- Footer that is equal on every page -->
+    <footer>
+        <section class="footer-content" id="footer-content-1">
+            <a href="./"><img src="img/logo-long.png" alt="PST logo"></a>
+        </section>
+        <section class="footer-content" id="footer-content-2">
+            <div class="text-container">
+                <h4>INFORMASJON</h4>
+                <h5>PST - Din sikkerhet</h5>
+                <h5>Org.nr - Hemmelig</h5>
+            </div>
+        </section>
+        <section class="footer-content" id="footer-content-3">
+            <div class="text-container">
+                <h4>KONTAKT</h4>
+                <h5><a href="mailto:kontakt@pst-appen.no">Send melding til sentralen</a></h5>
+                <h5><a href="tel:12345678">Ring sentralen</a></h5>
+            </div>
+        </section>
+        <section class="footer-content" id="footer-content-4">
+            <h4>TIL TOPPEN</h4>
+            <button onclick="topScroll()"><span class="material-icons">arrow_upward</span></button>
+        </section>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/cases.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

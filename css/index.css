@@ -1,0 +1,9 @@
+#main-banner {
+    background-image: url("../img/chess.jpg");
+    background-size: cover;
+    background-position: top center;
+}
+
+#main-banner * {
+    color: #FFFFFF;
+}

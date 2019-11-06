@@ -1,0 +1,122 @@
+main {
+    min-height: unset;
+}
+
+#case-banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 4rem;
+    margin-bottom: 0;
+}
+
+#case-banner [id*="case-banner-"] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 4rem;
+}
+
+#case-banner-left{
+    justify-content: flex-start;
+    margin-left: 2rem;
+}
+
+#case-banner-right{
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+#case-banner h1 {
+    color: #FFFFFF;
+    font-size: 2rem;
+}
+
+.case-wrapper-case-site {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 2rem;
+    padding: 2rem;
+    background-color: #FFFFFF;
+    border-radius: 0.2rem;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.35);
+
+}
+
+#case-content-left {}
+
+#case-content-left section {
+    border-bottom: 1px solid lightgrey;
+}
+
+#case-content-left section h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+#case-content-left section h2 {}
+#case-content-left section h3 {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+#case-content-left section h4 {}
+
+#case-content-left section h5 {
+    color: #77828f;
+}
+
+#case-content-left section p {
+    color: #77828f;
+}
+
+#case-content-left .header-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+}
+
+#case-content-left .header-section h5:last-of-type {
+    margin-left: auto;
+}
+
+#case-content-left .title-section {}
+#case-content-left .type-section {}
+
+#case-content-left .desc-section {
+    border-bottom: none;
+}
+
+#case-content-left .desc-section p:last-of-type {
+    color: #000000;
+}
+
+#case-content-right {
+    text-align: center;
+}
+
+#case-content-right .case-img{
+    max-width: 100%;
+    max-height: 500px;
+    margin: 0 auto;
+}
+
+footer {
+    margin-top: 0 !important;
+}
+
+@media only screen and (max-width: 1200px) {
+    #case-content-left {
+        margin-right: 1rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .case-wrapper-case-site {
+        grid-template-columns: 100%;
+    }
+    #case-content-left {
+        margin-right: 0;
+    }
+    #case-content-left .desc-section {
+        border-bottom: 1px solid lightgrey;
+        margin-bottom: 2rem;
+    }
+}

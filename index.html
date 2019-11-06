@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<!--
+    UNIVERSELL UTFORMING:
+
+        Bilder
+            - Alle bilder har en alternativ tekst. Hvis bildet ikke vises vil teksten bli synlig
+            - Hvis det er statiske bilder i artikler vil de ha en forklarende tekst under bildet 
+                som kan bli lest opp av en screenreader
+
+        Tekststørrelse (font-size) styres av browserens (klientens) innstillinger
+            - Har konsekvent brukt rem for at font-size skal følge nettleserens predefinerte innstillinger
+
+        Fargevalg
+            - Brukt farger med god kontrast for at personer med fargeblindhet skal ha så lite vanskeligheter som mulig
+
+        Fulgt retningslinjer for bruk av tilbakemeldinger til bruker
+            - Popup-advarsel når brukeren er på vei til å gjøre noe ireversibelt
+
+        Fulgt retningslinjer for bruk av forklarende meldinger til bruker om hva som skal skje
+            - Klar tekst for hva som er i ferd med å skje hvis brukeren trykker på ulike knapper
+
+        Bruk av kjente ikoner og snarveier for å ikke villlede brukeren
+            - Pluss-tegn for å legge til nye elementer
+            - Logo leder tilbake til forside
+
+        Fulgt konvensjon for oppbygging av elementer med tanke på andvendbarhet ved bruk av tastatur
+            - Man kan fint "tabbe" seg gjennom sidene, og navigere med tastatur
+            - Et lite minus her er navigering med "tab"-tast for å nå frem til popup-innholdet på admin-siden   
+-->
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,600,800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>PST - Din sikkerhet</title>
+</head>
+
+<body>
+    <!-- Fixed header that is equal on every page -->
+    <header>
+        <section class="header-left">
+            <a href="./"><img src="img/logo-long.png" alt="PST logo"></a>
+        </section>
+        <section class="header-right">
+            <div onclick="showMenu()" id="menu-button">&#9776;</div>
+            <nav id="topnav" class="topnav">
+                <ul><a href="./"><u>HJEM</u></a></ul>
+                <ul><a href="admin.html">KONTROLLPANEL</a></ul>
+            </nav>
+        </section>
+    </header>
+    <!-- Main container with main content -->
+    <main>
+        <!-- Banner -->
+        <section id="main-banner" class="banner">
+            <h1>RIKETS SIKKERHET</h1>
+            <h2>VÅRT ANSVAR</h2>
+        </section>
+        <!-- Cases -->
+        <section class="case-wrapper">
+            <article>
+                <h2 class="content-title">Uløste saker:</h2>
+                <section class="case-container" id="index-unsolved-case-container"></section>
+            </article>
+            <article>
+                <h2 class="content-title">Løste saker:</h2>
+                <section class="case-container" id="index-solved-case-container"></section>
+            </article>
+        </section>
+    </main>
+    <!-- Footer that is equal on every page -->
+    <footer>
+        <section class="footer-content" id="footer-content-1">
+            <a href="./"><img src="img/logo-long.png" alt="PST logo"></a>
+        </section>
+        <section class="footer-content" id="footer-content-2">
+            <div class="text-container">
+                <h4>INFORMASJON</h4>
+                <h5>PST - Din sikkerhet</h5>
+                <h5>Org.nr - Hemmelig</h5>
+            </div>
+        </section>
+        <section class="footer-content" id="footer-content-3">
+            <div class="text-container">
+                <h4>KONTAKT</h4>
+                <h5><a href="mailto:kontakt@pst-appen.no">Send melding til sentralen</a></h5>
+                <h5><a href="tel:12345678">Ring sentralen</a></h5>
+            </div>
+        </section>
+        <section class="footer-content" id="footer-content-4">
+            <h4>TIL TOPPEN</h4>
+            <button onclick="topScroll()"><span class="material-icons">arrow_upward</span></button>
+        </section>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/cases.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

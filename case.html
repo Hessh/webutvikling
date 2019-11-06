@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/case.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,600,800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>PST - Enkeltsak</title>
+</head>
+
+<body>
+    <!-- Fixed header that is equal on every page -->
+    <header>
+        <section class="header-left">
+            <a href="./"><img src="img/logo-long.png" alt="PST logo"></a>
+        </section>
+        <section class="header-right">
+            <div onclick="showMenu()" id="menu-button">&#9776;</div>
+            <nav id="topnav" class="topnav">
+                <ul><a href="./">HJEM</a></ul>
+                <ul><a href="admin.html">KONTROLLPANEL</a></ul>
+            </nav>
+        </section>
+    </header>
+    <!-- Main container with main content -->
+    <main>
+        <!-- Banner -->
+        <section id="case-banner" class="banner">
+            <div id="case-banner-left"></div>
+            <div id="case-banner-right"></div>
+        </section>
+        <!-- Case -->
+        <section id="case-wrapper" class="case-wrapper-case-site">
+            <section id="case-content-left" class="case-content"></section>
+            <section id="case-content-right" class="case-content"></section>
+        </section>
+    </main>
+    <!-- Footer that is equal on every page -->
+    <footer>
+        <section class="footer-content" id="footer-content-1">
+            <a href="./"><img src="img/logo-long.png" alt="PST logo"></a>
+        </section>
+        <section class="footer-content" id="footer-content-2">
+            <div class="text-container">
+                <h4>INFORMASJON</h4>
+                <h5>PST - Din sikkerhet</h5>
+                <h5>Org.nr - Hemmelig</h5>
+            </div>
+        </section>
+        <section class="footer-content" id="footer-content-3">
+            <div class="text-container">
+                <h4>KONTAKT</h4>
+                <h5><a href="mailto:kontakt@pst-appen.no">Send melding til sentralen</a></h5>
+                <h5><a href="tel:12345678">Ring sentralen</a></h5>
+            </div>
+        </section>
+        <section class="footer-content" id="footer-content-4">
+            <h4>TIL TOPPEN</h4>
+            <button onclick="topScroll()"><span class="material-icons">arrow_upward</span></button>
+        </section>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/cases.js"></script>
+    <script src="js/case.js"></script>
+</body>
+
+</html>
