@@ -16,6 +16,7 @@
 
 <body>
     <!-- Inputfields in popup with overlay. Default display: none -->
+    <!-- Popup for adding new case -->
     <section id="add-container" class="overlay-container">
         <article class="overlay">
             <h3>LEGG TIL NY SAK</h3>
@@ -49,6 +50,7 @@
             <button class="exit-button" onclick="exitAddPopup()"><span class="material-icons">close</span></button>
         </article>
     </section>
+    <!-- Popup for editing case -->
     <section id="edit-container" class="overlay-container">
         <article class="overlay">
             <h3>REDIGER SAK</h3>
@@ -62,17 +64,17 @@
                 <option value="Trygghetsrådgivning">Trygghetsrådgivning</option>
             </select>
             <select name="img" id="edit-img">
-                    <option value="logo.jpg">Velg bilde</option>
-                    <option value="etterforskning.jpg">Etterforskning</option>
-                    <option value="forebygging.jpg">Forebygging</option>
-                    <option value="informasjonsinnhenting.jpg">Informasjonsinnhenting</option>
-                    <option value="livvakt.jpg">Livvakt</option>
-                    <option value="person-etterforskning.jpg">Person-etterforskning 1</option>
-                    <option value="person-etterforskning-1.jpg">Person-etterforskning 2</option>
-                    <option value="trusselvurdering.jpg">Trusselvurdering</option>
-                    <option value="trygghetsraadgivning.jpg">Trygghetsrådgivning</option>
-                    <option value="folkemengde.jpg">Folkemengde</option>
-                </select>
+                <option value="logo.jpg">Velg bilde</option>
+                <option value="etterforskning.jpg">Etterforskning</option>
+                <option value="forebygging.jpg">Forebygging</option>
+                <option value="informasjonsinnhenting.jpg">Informasjonsinnhenting</option>
+                <option value="livvakt.jpg">Livvakt</option>
+                <option value="person-etterforskning.jpg">Person-etterforskning 1</option>
+                <option value="person-etterforskning-1.jpg">Person-etterforskning 2</option>
+                <option value="trusselvurdering.jpg">Trusselvurdering</option>
+                <option value="trygghetsraadgivning.jpg">Trygghetsrådgivning</option>
+                <option value="folkemengde.jpg">Folkemengde</option>
+            </select>
             <input id="edit-title" type="text" placeholder="Tittel">
             <textarea id="edit-desc" type="text" placeholder="Beskrivelse"></textarea>
             <div id="edit-checkbox" class="checkbox">
@@ -82,6 +84,7 @@
             <button class="exit-button" onclick="exitEditPopup()"><span class="material-icons">close</span></button>
         </article>
     </section>
+    <!-- Popup for delete-confirmation  -->
     <section id="delete-container" class="overlay-container">
         <article class="overlay" id="confirmation-overlay">
             <span class="material-icons icon-red">delete_forever</span>
@@ -93,6 +96,7 @@
             </div>
         </article>
     </section>
+    <!-- END inputfields -->
     <!-- Fixed header that is equal on every page -->
     <header>
         <section class="header-left">

@@ -424,12 +424,14 @@ function caseStatus(status, id) {
         statusEl.textContent = "Uløst"
         statusButton.textContent = "Flytt til løst"
         statusButton.setAttribute("onclick", `caseStatus(${false}, ${id})`);
+        statusButton.setAttribute("class", "status-button solved")
         statusButton.style.backgroundImage = "linear-gradient(#32AD36, #2b8b2e)"
         caseBanner.style.backgroundImage = "linear-gradient(#F15E5D, #e45555)"
 
     } else {
         statusEl.textContent = "Løst"
         statusButton.setAttribute("onclick", `caseStatus(${true}, ${id})`);
+        statusButton.setAttribute("class", "status-button unsolved")
         statusButton.textContent = "Flytt til uløst"
         statusButton.style.backgroundImage = "linear-gradient(#F15E5D, #e45555)"
         caseBanner.style.backgroundImage = "linear-gradient(#32AD36, #2b8b2e)"

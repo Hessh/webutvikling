@@ -1,18 +1,20 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <!--
     UNIVERSELL UTFORMING:
 
         Bilder
-            - Alle bilder har en alternativ tekst. Hvis bildet ikke vises vil teksten bli synlig
-            - Hvis det er statiske bilder i artikler vil de ha en forklarende tekst under bildet 
-                som kan bli lest opp av en screenreader
+            - Alle bilder i html'en har en alternativ tekst
 
         Tekststørrelse (font-size) styres av browserens (klientens) innstillinger
             - Har konsekvent brukt rem for at font-size skal følge nettleserens predefinerte innstillinger
 
         Fargevalg
             - Brukt farger med god kontrast for at personer med fargeblindhet skal ha så lite vanskeligheter som mulig
+
+        Kontrast
+            - Følger minstekravet til kontrast, altså nivå AA
 
         Fulgt retningslinjer for bruk av tilbakemeldinger til bruker
             - Popup-advarsel når brukeren er på vei til å gjøre noe ireversibelt
@@ -26,11 +28,14 @@
 
         Fulgt konvensjon for oppbygging av elementer med tanke på andvendbarhet ved bruk av tastatur
             - Man kan fint "tabbe" seg gjennom sidene, og navigere med tastatur
-            - Et lite minus her er navigering med "tab"-tast for å nå frem til popup-innholdet på admin-siden   
+            - Et lite minus her er navigering med "tab"-tast for å nå frem til popup-innholdet på admin-siden
+
+    KNOWN BUGS:
+
+        - Kan ikke slette eller endre allerede eksisterende statiske objekter, men de skal jo ikke være der i en reell situasjon uansett.
+        - Slettingen bugger seg noen ganger hvis man har opprettet veldig mange objekter og prøver å slette alle samtidig.
+        - Hover-stilsetting av løst/uløst knapp på case.html siden fungerer bare før man trykker på knappen første gang
 -->
-
-
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -65,6 +70,16 @@
         <section id="main-banner" class="banner">
             <h1>RIKETS SIKKERHET</h1>
             <h2>VÅRT ANSVAR</h2>
+            <div class="banner-overlay"></div>
+            <img class="banner-img fade" alt="Barcode i Oslo" style="background-image: url('img/banner/1.jpg');">
+            <img class="banner-img fade" alt="Norsk flagg i flaggstang"
+                style="background-image: url('img/banner/2.jpg'); display: none">
+            <img class="banner-img fade" alt="Politistyrke"
+                style="background-image: url('img/banner/3.jpg'); display: none">
+            <img class="banner-img fade" alt="Overvåkingskamera på vegg"
+                style="background-image: url('img/banner/4.jpg'); display: none">
+            <img class="banner-img fade" alt="Politistyrke rundt biler"
+                style="background-image: url('img/banner/5.jpg'); display: none">
         </section>
         <!-- Cases -->
         <section class="case-wrapper">
@@ -102,6 +117,7 @@
             <button onclick="topScroll()"><span class="material-icons">arrow_upward</span></button>
         </section>
     </footer>
+    <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/cases.js"></script>
     <script src="js/index.js"></script>
