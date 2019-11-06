@@ -5,7 +5,10 @@
     UNIVERSELL UTFORMING:
 
         Bilder
-            - Alle bilder i html'en har en alternativ tekst
+            - Alle bilder i html'en som det er hensiktsmessig å ha alt-tag på har en alternativ tekst
+            - Bilder som er fremvist ved hjelp av background-image har ingen alternativ tekst
+                - Dette fordi det ikke viser informasjon av høy viktighetsgrad, og vil derfor ikke være nødvendig
+                - Nettsidens innhold og informasjon avhenger ikke av bildet fremvist ved hjelp av background-image
 
         Tekststørrelse (font-size) styres av browserens (klientens) innstillinger
             - Har konsekvent brukt rem for at font-size skal følge nettleserens predefinerte innstillinger
@@ -73,15 +76,11 @@
             <h1>RIKETS SIKKERHET</h1>
             <h2>VÅRT ANSVAR</h2>
             <div class="banner-overlay"></div>
-            <img class="banner-img fade" style="background-image: url('img/banner/1.jpg');" alt="Barcode i Oslo">
-            <img class="banner-img fade" style="background-image: url('img/banner/2.jpg'); display: none"
-                alt="Norsk flagg i flaggstang">
-            <img class="banner-img fade" style="background-image: url('img/banner/3.jpg'); display: none"
-                alt="Politistyrke">
-            <img class="banner-img fade" style="background-image: url('img/banner/4.jpg'); display: none"
-                alt="Overvåkingskamera på vegg">
-            <img class="banner-img fade" style="background-image: url('img/banner/5.jpg'); display: none"
-                alt="Politistyrke rundt biler">
+            <img class="banner-img fade" style="background-image: url('img/banner/1.jpg');">
+            <img class="banner-img fade" style="background-image: url('img/banner/2.jpg'); display: none">
+            <img class="banner-img fade" style="background-image: url('img/banner/3.jpg'); display: none">
+            <img class="banner-img fade" style="background-image: url('img/banner/4.jpg'); display: none">
+            <img class="banner-img fade" style="background-image: url('img/banner/5.jpg'); display: none">
         </section>
         <!-- Cases -->
         <section class="case-wrapper">
