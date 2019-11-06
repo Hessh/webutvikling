@@ -31,12 +31,6 @@ body {
     background-color: rgba(0, 0, 0, 0.80);
 }
 
-#add-container {}
-
-#edit-container {}
-
-#delete-container {}
-
 .overlay {
     position: relative;
     display: flex;

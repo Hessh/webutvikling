@@ -43,8 +43,6 @@ main {
     color: #FFFFFF;
 }
 
-.banner h3 {}
-
 .case-wrapper {
     display: flex;
     flex-direction: column;
